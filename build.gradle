@@ -25,9 +25,7 @@ repositories {
 
 ext {
 	hypersistenceTsidVersion = '2.1.4'
-	hypersistenceUtilsVersion = '3.9.2'
 	uuidVersion = '5.1.0'
-	mapstructVersion = '1.6.3'
 }
 
 dependencies {
