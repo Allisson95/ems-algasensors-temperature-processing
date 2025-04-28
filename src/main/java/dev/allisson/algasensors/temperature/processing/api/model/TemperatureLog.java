@@ -5,12 +5,13 @@ import io.hypersistence.tsid.TSID;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.UUID;
 
 @ToString
 @Getter
-public class TemperatureLog {
+public class TemperatureLog implements Serializable {
     private final UUID id;
     private final TSID sensorId;
     private final Double temperature;
