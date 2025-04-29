@@ -47,7 +47,11 @@ public class TemperatureProcessingController {
             return message;
         };
 
-        this.rabbitTemplate.convertAndSend(RabbitMQConfiguration.FANOUT_EXCHANGE_NAME, "", temperatureLog, messagePostProcessor);
+        this.rabbitTemplate.convertAndSend(
+                RabbitMQConfiguration.FANOUT_EXCHANGE_NAME,
+                "",
+                temperatureLog,
+                messagePostProcessor);
         log.trace("Temperature data sent to processing: {}", temperatureLog);
     }
 
